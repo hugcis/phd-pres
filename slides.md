@@ -105,7 +105,7 @@ layout: intro-image
 
 <style>
 .slidev-vclick-target {
-  transition: opacity 2s ease;
+  transition: opacity 2.3s ease;
 }
 </style>
 <v-click>
@@ -113,6 +113,8 @@ layout: intro-image
 # Une thèse en ~~180 secondes~~ <br>*30 minutes*
 
 <p class="text-sm opacity-50">Apprentissage non supervisé dans les systèmes complexes</p>
+
+<a class="absolute bottom-2 right-2 text-sm opacity-90" href="https://mt180.fr/" target="_blank">Concours "ma thèse en 180 secondes"</a>
 
 </v-click>
 
@@ -130,7 +132,7 @@ transition: fade-out
 
 - Un stage de recherche de 6 mois à Prague (S2 2019)
 
-- 3 ans de recherche à l'INRIA/ENS et au CIIRC <br>*(Institut de recherche en informatique, robotique et cybernétique de l'Université technique de Prague)*
+- 3 ans de recherche à l'INRIA/ENS et au CIIRC <br>*(Institut de recherche en informatique, robotique et cybernétique <br> de l'Université technique de Prague)*
 
 - 2 directeurs de thèse: Tomas Mikolov et Josef Sivic
   <div class="flex justify-center">
@@ -140,6 +142,14 @@ transition: fade-out
 
 - Thèse finalisée en Décembre 2022, soutenue en Mai 2023 
 
+<img src="https://statemag.state.gov/wp-content/uploads/2023/10/1123pom-3-1.jpg" width="300" height="200" alt="pom" class="absolute top-15 right-4">
+
+<div class="absolute top-2 right-2 flex justify-center">
+<img class="mr-2" src="https://upload.wikimedia.org/wikipedia/commons/9/95/Inr_logo_rouge.svg" width="100" height="100" alt="inria">
+
+<img class="mr-2" src="./assets/czech_institute_of_informatics_robotics_and_cybernetics.svg" width="100" height="100" alt="ciirc">
+<img class="mr-2" src="https://www.ens.psl.eu/sites/default/files/logo_ens_psl.jpg" width="100" height="100px" alt="ens">
+</div>
 ---
 transition: slide-left
 ---
@@ -196,9 +206,8 @@ transition: slide-left
 # Qu'est-ce qu'un système complexe ?
 
 <div class="my-10">
-
-> <h2>"<i>Le tout est plus la somme de ses parties</i>"</h2>
-> inconnu
+	
+> <h2>"<i>Le tout est plus que la somme de ses parties</i>"</h2>
 
 </div>
 
@@ -225,7 +234,7 @@ transition: slide-left
 
 - **Réseaux Sociaux**: Chaque personne fait des choix *simples* (comme aimer, partager, commenter) mais ensemble ils créent des tendances virales, des memes, des changement globaux et systémiques
 
-- **Embouteillages**: Chaque voiture qui suit des règles *simples* (accélérer, freiner, changer de voie), qui peuvent créer des vagues de congestion et des embouteillages inattendus
+- **Embouteillages**: Chaque voiture qui suit des règles *simples* (accélérer, freiner, changer de voie), qui peuvent créer des vagues de congestion et des embouteillages spontanés
 
 - **Météo**: Les interactions entre des molécules dans l'air et l'eau créent des tempêtes et des phénomènes météorologiques complexes
 
@@ -252,7 +261,7 @@ transition: slide-left
 
 # Caractéristiques des systèmes complexes
 
-<div class="mt-20">
+<div class="mt-15">
 
 ### **Émergence** : Des patterns apparaissent qui n'ont pas été programmés dans les parties individuelles
 
@@ -268,13 +277,19 @@ transition: slide-left
 
 </div>
 
+<v-click>
+<div class="mt-5">
+<hr>
+<h2 class="text-center mt-5">La science des systèmes complexes est <span class="bg-yellow-300 text-black px-1 py-[0.5] rounded-sm">l'étude de ces objets</span> aux caractéristiques étonnantes</h2>
+</div>
+</v-click>
+
 ---
 transition: slide-up
 ---
-<div class="grid grid-cols-[3.4fr_1fr] ">
-<iframe src="https://www.complexity-explorables.org/slides/flockn-roll/" width="100%" height="700px" scrolling="no"></iframe>
+<div class="grid grid-cols-[1fr_3.4fr] ">
 
-<div class="ml-10 text-sm">
+<div class="mr-10 text-sm">
 
 <h2>Simulons un système complexe</h2>
 
@@ -290,6 +305,7 @@ Chaque "oiseau" doit:
 
 </div>
 
+<iframe src="https://www.complexity-explorables.org/slides/flockn-roll/" width="100%" height="700px" scrolling="no"></iframe>
 </div>
 
 ---
@@ -308,30 +324,223 @@ transition: slide-left
 ---
 transition: slide-left
 ---
+
 # Évolution ouverte
 
-<div class="mt-10">
+<div class="my-10">
 
 > <h2>"<i>Une capacité à continuer à grandir, évoluer et créer de nouvelles choses à l'infini</i>"</h2>
 
 </div>
 
+<div class="flex justify-center">
+<img 
+  src="./assets/soup.png" 
+  width="250px" 
+  alt="open-ended"
+>
+</div>
+<div  class="flex justify-center mt-2">
+<img src="https://i.gifer.com/ZKZg.gif" width="120px" alt="open-ended">
+</div>
+<div v-click class="flex justify-center absolute bottom-5 left-40">
+<img src="./assets/tree.png" width="650px" alt="open-ended">
+</div>
 
-<v-click hide>
+---
+layout: statement
+---
+
+<h1 style="line-height: 1.2;">
+  On ne connaît pas de système 
+  <span style="font-size: 0.5em">(algorithme, machine, équation, etc.)</span> 
+  qui 
+  <span class="bg-yellow-300 text-black px-1 py-[0.5] rounded-sm">reproduise l'évolution ouverte</span>
+</h1>
+
+---
+layout: two-cols
+transition: slide-left
+---
+
+<div class="mt-59">
+<img src="./assets/complex.jpg" width="650px" alt="open-ended">
+</div>
+
+::right::
+
+<div >
+<img src="./assets/open-ended.jpg" width="650px" alt="open-ended">
+</div>
+
+<p class="absolute top-60 left-117 text-7xl">+</p>
+
+<p class="absolute top-30 left-25 text-4xl">Systèmes complexes</p>
+<p class="absolute top-90 left-142 text-4xl">Évolution ouverte ?</p>
+
+
+---
+---
+
+# L'automate cellulaire
+## Le plus "simple" des systèmes complexes
+
+
+<div class="mt-5 grid grid-cols-[2fr_1fr] ">
 
 <div class="flex justify-center">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <g transform="scale(0.5)">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Timeline_evolution_of_life.svg" width="450px" alt="open-ended">
+  <rect width="200" height="200" fill="white"/>
 
+  <line x1="50" y1="0" x2="50" y2="200" stroke="black" stroke-width="2"/>
+  <rect v-click x="50" y="0" width="50" height="50" fill="black"/>
+  <rect v-after x="50" y="50" width="50" height="50" fill="black"/>
+  <rect v-after x="150" y="100" width="50" height="50" fill="black"/>
+  <rect v-after v-hide x="150" y="50" width="50" height="50" fill="black"/>
+
+  <rect v-click x="100" y="0" width="50" height="50" fill="black"/>
+  <rect v-after x="100" y="100" width="50" height="50" fill="black"/>
+
+  <line x1="100" y1="0" x2="100" y2="200" stroke="black" stroke-width="2"/>
+
+  <line x1="150" y1="0" x2="150" y2="200" stroke="black" stroke-width="2"/>
+
+  <line x1="0" y1="50" x2="200" y2="50" stroke="black" stroke-width="2"/>
+
+  <line x1="0" y1="100" x2="200" y2="100" stroke="black" stroke-width="2"/>
+
+  <line x1="0" y1="150" x2="200" y2="150" stroke="black" stroke-width="2"/>
+  </g>
+</svg>
 </div>
+
+<div>
+
+### Une grille
+
+<div class="mt-10"/>
+<v-click at="1">
+
+### Des cellules "vivantes" (noires) ou "mortes" (blanches)
 
 </v-click>
 
-<v-after>
+<div class="mt-10"/>
+<v-click at="2">
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/e/eb/Timeline_evolution_of_life.svg" width="450px" alt="open-ended">
+### Les cellules évoluent
 
-</v-after>
+1. Une cellule morte possédant exactement trois cellules voisines vivantes devient vivante (elle naît)
+
+2. Une cellule vivante ne possédant pas exactement deux ou trois cellules voisines vivantes meurt.
+
+</v-click>
+
+</div>
+
+</div>
+
+---
+layout: statement
+---
+
+<div class="flex justify-center mb-5">
+<img src="https://blog.datawrapper.de/wp-content/uploads/2021/06/game-of-life-loop-cropped.gif" width="450px" alt="open-ended">
+</div>
+
+<h1 class="text-md text-shadow-lg text-shadow-black-10">Ces systèmes complexes sont-ils capables de reproduire l'évolution ouverte ?</h1>
+
+
+---
+layout: section
+transition: slide-left
+---
+
+# Alors, tu cherches, mais tu trouves ?
+
+
+---
+layout: image-left
+image: ./assets/paper1.png
+backgroundSize: 25em 90%
+transition: slide-left
+---
+
+<div class="my-5">
+</div>
+
+## Comment mesurer qu'il se passe quelque chose d'intéressant dans un système complexe ?
+
+<div class="my-20">
+</div>
+
+
+## Application à des automates cellulaires
+
+<div class="my-15">
+</div>
+
+
+## Proposition d'une nouvelle métrique de complexité
+
+---
+layout: image-left
+image: ./assets/paper2.png
+backgroundSize: 25em 90%
+transition: slide-left
+---
+
+<div class="my-5">
+</div>
+
+## Que se passe-t-il dans les (très) grands systèmes complexes ?
+
+<div class="my-20">
+</div>
+
+
+## Application à des automates cellulaires
+
+<div class="my-15">
+</div>
+
+
+## Trouver des systèmes complexes avec différentes complexités à différentes échelles
+
+
+
+---
+layout: image-left
+image: ./assets/paper3.png
+backgroundSize: 25em 90%
+transition: slide-left
+---
+
+<div class="my-5">
+</div>
+
+## Ils sont bien complexes tous ces systèmes, mais qu'est-ce qu'ils peuvent *apprendre* ?
+
+<div class="my-20">
+</div>
+
+
+## Application à des automates cellulaires
+
+<div class="my-15">
+</div>
+
+
+## Les automates complexes apprenent plus vite que d'autres ! 
+
+
+---
+layout: statement
+---
+
+# Merci pour votre attention !
 
 ---
 ---
@@ -343,9 +552,10 @@ transition: slide-left
 <div>
 <h2>📚 Livres</h2>
 
-- "Collective Animal Behavior" - David Sumpter
-- "Swarm Intelligence" - James Kennedy
-- "Self-Organization in Biological Systems" - Scott Camazine
+- "Le Quark et le Jaguar" - Murray Gell-Mann
+- "Why Greatness Cannot Be Planned: The Myth of the Objective" - Joel Lehman & Kenneth Stanley
+- "The Selfish Gene" - Richard Dawkins
+- "Origins of Life" - Freeman Dyson
 </div>
 
 <div>
@@ -359,24 +569,16 @@ transition: slide-left
 <div>
 <h2>📄 Articles</h2>
 
-- "From Fish to Human Crowds: A Unified Theory" - Nature
-- "Collective Motion and Decision Making" - Science
-- "Self-organized Traffic Flow" - Physical Review E
+- ["An Overview of Open-Ended Evolution: Editorial Introduction to the Open-Ended Evolution II Special Issue" - Norman Packard et al.](https://direct.mit.edu/artl/article-abstract/25/2/93/2927/An-Overview-of-Open-Ended-Evolution-Editorial?redirectedFrom=fulltext) 
 </div>
 
 <div>
 <h2>🌐 Sites Web</h2>
 
+- [Google](https://www.google.com/search?q=game+of+life)
 - [Complexity Explorables](https://www.complexity-explorables.org/)
 - [Complexity Explorer](https://www.complexityexplorer.org)
 - [Santa Fe Institute](https://www.santafe.edu)
 </div>
 
 </div>
-
-
----
-layout: statement
----
-
-# Merci pour votre attention !
