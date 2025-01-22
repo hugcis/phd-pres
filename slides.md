@@ -150,6 +150,7 @@ transition: fade-out
 <img class="mr-2" src="./assets/czech_institute_of_informatics_robotics_and_cybernetics.svg" width="100" height="100" alt="ciirc">
 <img class="mr-2" src="https://www.ens.psl.eu/sites/default/files/logo_ens_psl.jpg" width="100" height="100px" alt="ens">
 </div>
+
 ---
 transition: slide-left
 ---
@@ -170,22 +171,12 @@ transition: slide-left
 ---
 layout: 3-images
 transition: slide-left
-imageLeft: './assets/image.jpg'
-imageTopRight: './assets/traffic.jpg'
-imageBottomRight: './assets/ant.jpg'
+imageLeft: '/assets/image.jpg'
+imageTopRight: '/assets/traffic.jpg'
+imageBottomRight: '/assets/ant.jpg'
 ---
 
 # Qu'ont-ils en commun ?
-
-<div class="grid grid-cols-3">
-
-![image](./assets/image.jpg)
-
-![image](./assets/traffic.jpg)
-
-![image](./assets/image.jpg)
-
-</div>
 
 ---
 layout: section
@@ -269,7 +260,7 @@ transition: slide-left
 
 ### **Auto-organisation** : Le système s'organise sans un contrôle central
 
-  - Comme comment les oiseaux forment des V sans un leader
+  - Comme les oiseaux qui forment des V en volant sans leader
 
 ### **Imprévisible** : Les petites modifications peuvent avoir des grandes conséquences
 
@@ -347,6 +338,19 @@ transition: slide-left
 <img src="./assets/tree.png" width="650px" alt="open-ended">
 </div>
 
+<div v-after >
+<img src="https://live-production.wcms.abc-cdn.net.au/bee6deea74c167f1e536a75a0aa827f1?impolicy=wcms_crop_resize&cropH=1373&cropW=2059&xPos=0&yPos=0&width=862&height=575" width="150px" alt="open-ended" class="absolute bottom-6 right-10">
+<img src="https://www.imperial.ac.uk/ImageCropToolT4/imageTool/uploaded-images/newseventsimage_1710243039395_mainnews2012_x4.jpg" width="150px" alt="open-ended" class="absolute bottom-33 right-10">
+<img src="./assets/notbad.jpg" width="150px" alt="open-ended" class="absolute bottom-61 right-10">
+<img src="https://u4d2z7k9.rocketcdn.me/wp-content/uploads/2023/07/Untitled-683-%C3%97-1024px-1024-%C3%97-683px-86.jpg.webp" width="150px" alt="open-ended" class="absolute bottom-6 left-10">
+
+<img src="https://www.natureetpaysages.com/wp-content/uploads/sites/21/elementor/thumbs/01_r_0-plijvr8qiebcf5ru6flwukhh6hgzr5uzpswjvhlwo0.jpg" width="150px" alt="open-ended" class="absolute bottom-33 left-10">
+
+<img src="https://akm-img-a-in.tosshub.com/indiatoday/images/story/202407/all-you-need-to-know-about-the-worlds-most-expensive-insect-stag-beetle-090509528-16x9_0.jpg?VersionId=ZHDEM8sPhrCo0z5eJz.JI1XELygsxTNF&size=690:388" width="150px" alt="open-ended" class="absolute bottom-61 left-10">
+
+</div>
+
+
 ---
 layout: statement
 ---
@@ -355,7 +359,8 @@ layout: statement
   On ne connaît pas de système 
   <span style="font-size: 0.5em">(algorithme, machine, équation, etc.)</span> 
   qui 
-  <span class="bg-yellow-300 text-black px-1 py-[0.5] rounded-sm">reproduise l'évolution ouverte</span>
+  <span class="bg-yellow-300 text-black px-1 py-[0.5] rounded-sm">reproduise
+  l'évolution ouverte</span>  naturelle
 </h1>
 
 ---
@@ -380,28 +385,29 @@ transition: slide-left
 
 
 ---
+layout: two-cols
 ---
 
 # L'automate cellulaire
 ## Le plus "simple" des systèmes complexes
 
 
-<div class="mt-5 grid grid-cols-[2fr_1fr] ">
 
-<div class="flex justify-center">
+<div class="flex justify-center mt-10">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
-  <g transform="scale(0.5)">
+  <g transform="scale(0.7)">
 
   <rect width="200" height="200" fill="white"/>
 
   <line x1="50" y1="0" x2="50" y2="200" stroke="black" stroke-width="2"/>
-  <rect v-click x="50" y="0" width="50" height="50" fill="black"/>
-  <rect v-after x="50" y="50" width="50" height="50" fill="black"/>
-  <rect v-after x="150" y="100" width="50" height="50" fill="black"/>
-  <rect v-after v-hide x="150" y="50" width="50" height="50" fill="black"/>
 
-  <rect v-click x="100" y="0" width="50" height="50" fill="black"/>
-  <rect v-after x="100" y="100" width="50" height="50" fill="black"/>
+  <rect v-click="1" v-click.hide="2" x="50" y="0" width="50" height="50" fill="black"/>
+  <rect v-click="1" v-click.hide="2" x="50" y="50" width="50" height="50" fill="black"/>
+  <rect v-click="1" v-click.hide="2" x="150" y="100" width="50" height="50" fill="black"/>
+  <rect v-click="1" v-click.hide="2" x="150" y="50" width="50" height="50" fill="black"/>
+
+  <rect v-click="2" x="100" y="0" width="50" height="50" fill="black"/>
+  <rect v-click="2" x="100" y="100" width="50" height="50" fill="black"/>
 
   <line x1="100" y1="0" x2="100" y2="200" stroke="black" stroke-width="2"/>
 
@@ -414,32 +420,126 @@ transition: slide-left
   <line x1="0" y1="150" x2="200" y2="150" stroke="black" stroke-width="2"/>
   </g>
 </svg>
+
 </div>
 
-<div>
+::right::
+
+<div class="mt-20">
 
 ### Une grille
 
-<div class="mt-10"/>
-<v-click at="1">
+<div class="mt-10"></div>
+
+<div v-click="1">
 
 ### Des cellules "vivantes" (noires) ou "mortes" (blanches)
 
-</v-click>
+</div>
 
-<div class="mt-10"/>
-<v-click at="2">
+<div class="mt-10"></div>
 
-### Les cellules évoluent
+<div v-click="2">
+
+### Les cellules évoluent selon des règles simples
 
 1. Une cellule morte possédant exactement trois cellules voisines vivantes devient vivante (elle naît)
 
 2. Une cellule vivante ne possédant pas exactement deux ou trois cellules voisines vivantes meurt.
 
-</v-click>
-
+</div>
 </div>
 
+---
+---
+
+<div style="position: absolute; height: 120vh; width: 150vw; left: -7%; top: -5%; z-index: -1;">
+<component is="script">
+        const canvas2 = document.getElementById('canvas2');
+        const ctx2 = canvas2.getContext('2d');
+        function resize() {
+            canvas2.width = window.innerWidth * 2;
+            canvas2.height = window.innerHeight * 2;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+        const cellSize2 = 3;        
+        const cols2 = Math.floor(canvas2.width / cellSize2);
+        const rows2 = Math.floor(canvas2.height / cellSize2);
+        let grid2 = new Array(cols2 * rows2).fill(0);
+        let nextGrid2 = new Array(cols2 * rows2).fill(0);
+        for(let i = 0; i < grid2.length; i++) {
+            grid2[i] = Math.random() > 0.70 ? 1 : 0;
+        }
+        function getIndex2(x, y) {
+            x = (x + cols2) % cols2;
+            y = (y + rows2) % rows2;
+            return y * cols2 + x;
+        }
+        function sleep2(ms) {
+          return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        function computeNextState2(x, y) {
+            let neighbors = 0;
+            for(let i = -1; i <= 1; i++) {
+                for(let j = -1; j <= 1; j++) {
+                    if(i === 0 && j === 0) continue;
+                    neighbors += grid2[getIndex2(x + i, y + j)];
+                }
+            }
+            const idx = getIndex2(x, y);
+            if(grid2[idx] === 1) {
+                return neighbors === 2 || neighbors === 3 ? 1 : 0;
+            } else {
+                return neighbors === 3 ? 1 : 0;
+            }
+        }
+        function draw2() {
+            ctx2.fillStyle = '#ffffff';
+            ctx2.fillRect(0, 0, canvas2.width, canvas2.height);
+            ctx2.fillStyle = '#000004';
+            for(let x = 0; x < cols2; x++) {
+                for(let y = 0; y < rows2; y++) {
+                    if(grid2[getIndex2(x, y)] === 1) {
+                      ctx2.beginPath();
+                      ctx2.arc(x * cellSize2 + cellSize2/2, y * cellSize2 + cellSize2/2, (cellSize2 - 1)/2, 0, Math.PI * 2);
+                      ctx2.fill();
+                    }
+                }
+            }
+        }
+        function update2() {
+            for(let x = 0; x < cols2; x++) {
+                for(let y = 0; y < rows2; y++) {
+                    nextGrid2[getIndex2(x, y)] = computeNextState2(x, y);
+                }
+            }
+            const blockSize2 = 3;
+            const blockChance2 = 0.0001;
+            for(let x = 0; x < cols2; x += blockSize2) {
+                for(let y = 0; y < rows2; y += blockSize2) {
+                    if(Math.random() < blockChance2) {
+                        for(let i = 0; i < blockSize2; i++) {
+                            for(let j = 0; j < blockSize2; j++) {
+                                if(x + i < cols2 && y + j < rows2) {
+                                    nextGrid2[getIndex2(x + i, y + j)] = 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            [grid2, nextGrid2] = [nextGrid2, grid2];
+        }
+        async function animate2() {
+            await sleep2(20);
+            update2();
+            draw2();
+            requestAnimationFrame(animate2);
+        }
+        animate2();
+</component>
+    <canvas id="canvas2" style="width: 100%; height: 100%"></canvas>
 </div>
 
 ---
@@ -450,7 +550,8 @@ layout: statement
 <img src="https://blog.datawrapper.de/wp-content/uploads/2021/06/game-of-life-loop-cropped.gif" width="450px" alt="open-ended">
 </div>
 
-<h1 class="text-md text-shadow-lg text-shadow-black-10">Ces systèmes complexes sont-ils capables de reproduire l'évolution ouverte ?</h1>
+<h1 class="text-md text-shadow-lg text-shadow-black-10">Ces systèmes complexes
+sont-ils capables d'évoluer ?</h1>
 
 
 ---
@@ -463,7 +564,7 @@ transition: slide-left
 
 ---
 layout: image-left
-image: ./assets/paper1.png
+image: /assets/paper1.png
 backgroundSize: 25em 90%
 transition: slide-left
 ---
@@ -487,7 +588,7 @@ transition: slide-left
 
 ---
 layout: image-left
-image: ./assets/paper2.png
+image: /assets/paper2.png
 backgroundSize: 25em 90%
 transition: slide-left
 ---
@@ -513,7 +614,7 @@ transition: slide-left
 
 ---
 layout: image-left
-image: ./assets/paper3.png
+image: /assets/paper3.png
 backgroundSize: 25em 90%
 transition: slide-left
 ---
@@ -552,10 +653,10 @@ layout: statement
 <div>
 <h2>📚 Livres</h2>
 
-- "Le Quark et le Jaguar" - Murray Gell-Mann
-- "Why Greatness Cannot Be Planned: The Myth of the Objective" - Joel Lehman & Kenneth Stanley
-- "The Selfish Gene" - Richard Dawkins
-- "Origins of Life" - Freeman Dyson
+- "*Le Quark et le Jaguar*" - Murray Gell-Mann
+- "*Why Greatness Cannot Be Planned: The Myth of the Objective*" - Joel Lehman & Kenneth Stanley
+- "*The Selfish Gene*" - Richard Dawkins
+- "*Origins of Life*" - Freeman Dyson
 </div>
 
 <div>
@@ -564,6 +665,7 @@ layout: statement
 - ["*Le Jeu de la Vie*" - Science Étonnante](https://www.youtube.com/watch?v=S-W0NX97DB0)
 - ["*Emergence: How Stupid Things Become Smart Together*" - Kurzgesagt](https://www.youtube.com/watch?v=16W7c0mb-rE)
 - ["*Magnetic Micro-Robots*" - Veritasium](https://www.youtube.com/watch?v=N7lXymxsdhw)
+- ["*Let’s BUILD a COMPUTER in CONWAY's GAME of LIFE ⠠⠵*" - Alan Zucconi](https://www.youtube.com/watch?v=Kk2MH9O4pXY)
 </div>
 
 <div>
